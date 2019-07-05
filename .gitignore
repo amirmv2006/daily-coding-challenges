@@ -1,2 +1,5 @@
 # Project exclude paths
-/july-challenges/target/
+.idea
+*.iml
+
+target/

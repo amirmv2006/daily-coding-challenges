@@ -1,8 +1,6 @@
 package ir.amv.os.dcc.july.fifth;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
+import static ir.amv.os.dcc.july.Utils.printInputAndOutput;
 
 /**
  Good morning! Here's your coding interview problem for today.
@@ -61,7 +59,6 @@ public class TwoNumberSum {
 
     private static void check(int k, int[] array) {
         boolean exists = existsTwoNumSumIs(k, array);
-        List<Integer> collect = Arrays.stream(array).boxed().collect(Collectors.toList());
-        System.out.println(k + " in " + collect + " = " + exists);
+        printInputAndOutput(exists, k, array);
     }
 }

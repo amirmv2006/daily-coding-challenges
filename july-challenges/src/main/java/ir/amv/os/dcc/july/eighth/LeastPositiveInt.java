@@ -22,12 +22,9 @@ public class LeastPositiveInt {
 
     private int findLeastMissingPositiveInteger(int[] input) {
         input = tempAddOne(input);
-        int counter = 0;
         for (int i = 1; i < input.length; i++) {
             int n = input[i];
-            counter++;
             while (n < input.length && n>0 && input[n] != n) {
-                counter++;
                 int x = input[n];
                 input[n] = n;
                 n = x;

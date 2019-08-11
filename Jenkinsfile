@@ -3,6 +3,8 @@ pipeline {
     label "jenkins-maven"
   }
   environment {
+    ORG = 'amirmv2006'
+    APP_NAME = 'daily-coding-challenges'
   }
   stages {
     stage('CI Build and push snapshot') {

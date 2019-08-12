@@ -49,9 +49,6 @@ pipeline {
         container('maven') {
           dir('charts/daily-coding-challenges') {
             sh "jx step changelog --version v\$(cat ../../VERSION)"
-
-            // promote through all 'Auto' promotion Environments
-            sh "jx promote -b --all-auto --timeout 1h --version \$(cat ../../VERSION)"
           }
         }
       }
